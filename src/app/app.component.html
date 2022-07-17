@@ -1,6 +1,8 @@
 <h1>{{title}}</h1>
 <nav>
-  <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/dashboard" [class.active]="activePage === 'dashboard'" (click)="setActive('dashboard')">Dashboard</a>
+
+  <a routerLink="/heroes" [class.active]="activePage === 'heroes'" (click)="setActive('heroes')">Heroes</a>
 </nav>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
